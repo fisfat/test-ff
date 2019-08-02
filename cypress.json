@@ -1,0 +1,14 @@
+{
+  "chromeWebSecurity": false,
+  "pageLoadTimeout": 100000,
+  "baseUrl": "https://app.fireflies.ai",
+  "projectId-dev": "g9fd5m",
+  "projectId": "azacaa",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
+}

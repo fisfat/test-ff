@@ -1,0 +1,36 @@
+{
+  "name": "cyress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "remove-report": "rm cypress/results/* || true",
+    "remove-results": "rm merged-result.json || true",
+    "test-track": "node index.js",
+    "cypress": "cypress run",
+    "mocha-merge": "npx mochawesome-merge --reportDir cypress/results > merged-result.json",
+    "mocha-generate": "npx mochawesome-report-generator merged-result.json",
+    "precypress": "npm run remove-report && npm run remove-results",
+    "merge": "npm run mocha-merge && npm run test-track && npm run mocha-generate",
+    "cypress-report": "npm run cypress || true && npm run merge"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "analytics-node": "^3.4.0-beta.1",
+    "core-js": "^3.1.4",
+    "cypress": "^3.3.1",
+    "lowdb": "^1.0.0",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
+    "mochawesome": "^4.0.1",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1",
+    "node-cron": "^2.0.3",
+    "npm": "^6.10.2"
+  },
+  "devDependencies": {}
+}
