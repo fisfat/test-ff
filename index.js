@@ -26,7 +26,18 @@ jsonReader('./merged-result.json', (err, test) => {
 
     const testResult = test.results
 
-    console.log(testResult.flat(2));
+    console.log('got to index');
+
+    analytics.track({
+        userId: result.title.toString().replace(/\s/g, ''),
+        event: 'performance: ' + result.title,
+        properties: {
+            test: 'test',
+            time: 'now'
+        }
+    });
+
+
 
 
     // testResult.forEach((result, index) => {

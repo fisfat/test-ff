@@ -13,7 +13,8 @@
     "mocha-generate": "npx mochawesome-report-generator merged-result.json",
     "precypress": "npm run remove-report && npm run remove-results",
     "merge": "npm run mocha-merge && npm run test-track && npm run mocha-generate",
-    "cypress-report": "npm run cypress || true && npm run merge"
+    "cypress-report": "npm run cypress || true && npm run merge",
+    "now": "now --docker --public --name test-ff"
   },
   "keywords": [],
   "author": "",
