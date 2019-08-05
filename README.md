@@ -9,5 +9,6 @@ touch cypress.env.json && cp cypress.env.json-example cypress.env.json
 ```
 
 run `npm run test` to start cypress.
+run `node entry` to start headless test.
 
 Alternatively, you can run `./node_modules/cypress/bin/cypress open` if the above run command fails.
