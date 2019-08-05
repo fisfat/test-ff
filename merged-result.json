@@ -2,23 +2,23 @@
   "stats": {
     "suites": 2,
     "tests": 10,
-    "passes": 1,
+    "passes": 4,
     "pending": 0,
     "failures": 6,
-    "start": "2019-07-28T01:56:22.446Z",
-    "end": "2019-07-28T01:56:22.446Z",
-    "duration": 142751,
+    "start": "2019-08-03T19:47:45.926Z",
+    "end": "2019-08-03T19:47:45.926Z",
+    "duration": 237588,
     "testsRegistered": 10,
-    "passPercent": 10,
+    "passPercent": 40,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 3,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "3f5e00b9-fc1e-49ac-bbbc-b9939fcb5c13",
+      "uuid": "8f35dc7d-03e1-4fbc-a23a-19dbb08fa017",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "297ac1e3-cb25-402a-854a-eb90c39ec329",
+          "uuid": "d9a3b83a-fdd3-4132-a395-442497bf4cca",
           "title": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+              "uuid": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
               "title": "Teammate Invitation",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "should send teammate invite",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation should send teammate invite",
                   "timedOut": null,
-                  "duration": 40759,
+                  "duration": 82332,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -56,12 +56,12 @@
                   "context": null,
                   "code": "cy.get(\".upscentral-button-separator\").find(\".invite-teammates\").should(\"have.text\", \"Invite Teammates\").click();\ncy.get(\".team-wrapper\").find(\"h3\").first().should(\"have.text\", \"Invite Teammates \"); //mind the space\ncy.get(\".invite-input-container\").find(\".email-input\").should(\"have.value\", \"\").type(invite_email).get(\".name-input\").should(\"have.value\", \"\").type(\"Oluwafisayo\").get(\"#send\").find(\".shared-ui-button_1RE5sx\").should(\"have.text\", \"sendSend Invitations\") //mind the sendSend. not a typo. trying to parse the icon.\n.click() // .find(\".shared-ui-button_1RE5sx\")\n.should(\"have.text\", \"sendSending...\") //mind the sendSending... not a typo. trying to parse the icon.\n.wait(100).get(\".add-members-container\").should(\"have.text\", \"checkInvitations Sent Successfully\"); //mind the checkInvitations. not a typo. trying to parse the icon.",
                   "err": {
-                    "message": "CypressError: Timed out retrying: Expected to find element: '.close-dialog', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Teammate Invitation'",
-                    "estack": "CypressError: Timed out retrying: Expected to find element: '.close-dialog', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Teammate Invitation'\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
+                    "message": "CypressError: Timed out retrying: cy.should() failed because this element is detached from the DOM.\n\n<button icon=\"send\" text=\"Send Invitations\" class=\"shared-ui-button_1RE5sx text-icon-button_Z1HQdOu add-text-button\">...</button>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.should()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                    "estack": "CypressError: Timed out retrying: cy.should() failed because this element is detached from the DOM.\n\n<button icon=\"send\" text=\"Send Invitations\" class=\"shared-ui-button_1RE5sx text-icon-button_Z1HQdOu add-text-button\">...</button>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.should()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "9c0ad2b3-6ed7-4ff0-a9a1-48e52957f5e9",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "21f35829-3b59-4203-bbc8-f442467e662f",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
                   "skipped": false
                 },
@@ -69,56 +69,56 @@
                   "title": "Should remove an input row",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation Should remove an input row",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 1243,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\"input\").first().should(\"be.visible\").get(\".invite-row-container\").find(\".remove-input\").click().get(\"form\").first().should(\"not.have\", \"input\");",
                   "err": {},
-                  "uuid": "fff4acb4-6430-4769-bd77-640c5b933f8a",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "06587904-488b-4b6b-b048-d2b1b7a1084b",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Should add an input row",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation Should add an input row",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 959,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\"#add\").click().get(\".email-input\").should(\"be.visible\").and(\"have.value\", \"\").get(\".name-input\").should(\"be.visible\").and(\"have.value\", \"\");",
                   "err": {},
-                  "uuid": "1fd7602e-cc9b-4549-930b-da417528e40b",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "5f1bd658-57fa-4f84-b2bc-30d847b9aacd",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "06587904-488b-4b6b-b048-d2b1b7a1084b",
+                "5f1bd658-57fa-4f84-b2bc-30d847b9aacd"
+              ],
               "failures": [
-                "9c0ad2b3-6ed7-4ff0-a9a1-48e52957f5e9"
+                "21f35829-3b59-4203-bbc8-f442467e662f"
               ],
               "pending": [],
-              "skipped": [
-                "fff4acb4-6430-4769-bd77-640c5b933f8a",
-                "1fd7602e-cc9b-4549-930b-da417528e40b"
-              ],
-              "duration": 40759,
+              "skipped": [],
+              "duration": 84534,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+              "uuid": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
               "title": "Categories Actions",
               "fullFile": "",
               "file": "",
@@ -129,21 +129,17 @@
                   "title": "Should create a category and keywords",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Categories Actions Should create a category and keywords",
                   "timedOut": null,
-                  "duration": 20215,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 38600,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(\"/categories\");\ncy.location(\"pathname\").should(\"eq\", \"/categories\");\ncy.get(\"#outlined-bare\").type(\"Business\").get(\"#property-chip\").type(\"Meeting\") // .type(\"{enter}\")\n.get(\"#outlined-bare\").invoke(\"val\", \"Business\").get(\"#property-chip\").invoke(\"val\", \"meeting\"); //considered incomplete because dom disapears",
-                  "err": {
-                    "message": "CypressError: Timed out retrying: Expected to find element: '.hidden-login', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Categories Actions'",
-                    "estack": "CypressError: Timed out retrying: Expected to find element: '.hidden-login', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Categories Actions'\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
-                    "diff": null
-                  },
-                  "uuid": "0aba8f2e-ba99-4c42-846d-2f4bca7f6a36",
-                  "parentUUID": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+                  "err": {},
+                  "uuid": "81040351-5e8c-46d5-aeea-966aa0cd4b84",
+                  "parentUUID": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
                   "isHook": false,
                   "skipped": false
                 },
@@ -151,31 +147,35 @@
                   "title": "Should remove category",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Categories Actions Should remove category",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 4993,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\".property-name\").should(\"have.text\", \"Sample terms\").find(\"svg\").invoke(\"show\").click();",
-                  "err": {},
-                  "uuid": "ac61726a-b147-4774-972e-a694c1b9f46c",
-                  "parentUUID": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '.property-name', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '.property-name', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
+                    "diff": null
+                  },
+                  "uuid": "13bb017d-f1b9-479e-9e22-4aeb9ad023c8",
+                  "parentUUID": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "81040351-5e8c-46d5-aeea-966aa0cd4b84"
+              ],
               "failures": [
-                "0aba8f2e-ba99-4c42-846d-2f4bca7f6a36"
+                "13bb017d-f1b9-479e-9e22-4aeb9ad023c8"
               ],
               "pending": [],
-              "skipped": [
-                "ac61726a-b147-4774-972e-a694c1b9f46c"
-              ],
-              "duration": 20215,
+              "skipped": [],
+              "duration": 43593,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -201,7 +201,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "557b9967-08fa-469f-8054-5a75e1db5be4",
+      "uuid": "b8305db6-a467-4c7a-9162-a0da067a6bb8",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -210,7 +210,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "35f65244-203c-47d0-a18c-09f7ca8a5920",
+          "uuid": "13a37f64-a93e-40c2-8930-a067eb5a8a20",
           "title": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes",
           "fullFile": "",
           "file": "",
@@ -219,7 +219,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+              "uuid": "04156ed7-4013-4426-98d2-1c87e96c4459",
               "title": "Meeting",
               "fullFile": "",
               "file": "",
@@ -230,7 +230,7 @@
                   "title": "should create a meeting",
                   "fullTitle": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes Meeting should create a meeting",
                   "timedOut": null,
-                  "duration": 8762,
+                  "duration": 2695,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -239,8 +239,8 @@
                   "context": null,
                   "code": "var query = \"mutation{\\n          liveMeeting(email: \\\"\".concat(email, \"\\\", phone: \\\"\").concat(phone, \"\\\", digits: \\\"\").concat(digits, \"\\\", duration: \").concat(duration, \", title: \\\"\").concat(title, \"\\\")\\n      }\");\ncy.request({\n  method: \"POST\",\n  url: \"https://dev.firefliesapp.com/graphql\",\n  body: {\n    query: query\n  },\n  failOnStatusCode: false,\n  headers: {\n    Authorization: \"Bearer 7437-81ae6f9c61f01a2946c462cd6827decb\"\n  }\n}).then(function (res) {\n  expect(res.body.data.liveMeeting).to.equals(true);\n});",
                   "err": {},
-                  "uuid": "b9f40a90-fc92-462c-aa5c-3edb9fc07b59",
-                  "parentUUID": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+                  "uuid": "c53feca8-9808-474a-a1c2-fec4990fd89e",
+                  "parentUUID": "04156ed7-4013-4426-98d2-1c87e96c4459",
                   "isHook": false,
                   "skipped": false
                 },
@@ -248,7 +248,7 @@
                   "title": "Should assert the creation of the meeting on the dashboard",
                   "fullTitle": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes Meeting Should assert the creation of the meeting on the dashboard",
                   "timedOut": null,
-                  "duration": 59273,
+                  "duration": 92141,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -257,12 +257,12 @@
                   "context": null,
                   "code": "cy.doLogin();\ncy.get(\".live-meeting-holder\").first().contains(title);\ncy.visit(\"/notebook\").location(\"pathname\").should(\"eq\", \"/notebook\").wait(5000).get(\".driver-close-only-btn\").click().get(\".ffnb-custom-card-holder\").last().click();\ncy.wait(2000);\ncy.window().then(function (win) {\n  var res = win.MeetingNotes.findOne();\n  var args = {\n    insertToMongo: true\n  };\n  win.Meteor.call('sendRandomMeeting', null, args, res);\n});\ncy.visit(\"/notebook\").location(\"pathname\").should(\"eq\", \"/notebook\").wait(5000).get(\".ffnb-custom-card-holder\").last().click();",
                   "err": {
-                    "message": "CypressError: Timed out retrying: cy.click() failed because this element is not visible:\n\n<button class=\"shared-ui-button_1RE5sx circle-icon-button_2io4nn remove-input close-dialog\" icon=\"close\">...</button>\n\nThis element '<button.shared-ui-button_1RE5sx.circle-icon-button_2io4nn.remove-input.close-dialog>' is not visible because it has an effective width and height of: '0 x 0' pixels.\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
-                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element is not visible:\n\n<button class=\"shared-ui-button_1RE5sx circle-icon-button_2io4nn remove-input close-dialog\" icon=\"close\">...</button>\n\nThis element '<button.shared-ui-button_1RE5sx.circle-icon-button_2io4nn.remove-input.close-dialog>' is not visible because it has an effective width and height of: '0 x 0' pixels.\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at Object.retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at retryActionability (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68282:19)\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Function.Promise.attempt.Promise.try (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:129516:29)\n    at tryFn (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76880:24)\n    at whenStable (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76908:12)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76664:16\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130341:18)\n    at Promise._fulfill (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130286:18)",
+                    "message": "CypressError: Timed out retrying: Expected to find element: '.live-meeting-holder', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '.live-meeting-holder', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "91239c48-7de4-4304-b341-9b7dd7ae3cf8",
-                  "parentUUID": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+                  "uuid": "45dfafee-ad56-43ed-ad9a-dbda146479ac",
+                  "parentUUID": "04156ed7-4013-4426-98d2-1c87e96c4459",
                   "isHook": false,
                   "skipped": false
                 },
@@ -270,7 +270,7 @@
                   "title": "Should toggle edit mode",
                   "fullTitle": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes Meeting Should toggle edit mode",
                   "timedOut": null,
-                  "duration": 5024,
+                  "duration": 4725,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -283,8 +283,8 @@
                     "estack": "CypressError: Timed out retrying: Expected to find element: '.toggle-button_20Xvrg', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "dfe9778f-38e2-4a09-b12b-d3aca00eac95",
-                  "parentUUID": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+                  "uuid": "51c025e6-3e97-4eb3-83ed-847bf9b50ff5",
+                  "parentUUID": "04156ed7-4013-4426-98d2-1c87e96c4459",
                   "isHook": false,
                   "skipped": false
                 },
@@ -292,7 +292,7 @@
                   "title": "Should load and play audio",
                   "fullTitle": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes Meeting Should load and play audio",
                   "timedOut": null,
-                  "duration": 4341,
+                  "duration": 4864,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -305,8 +305,8 @@
                     "estack": "CypressError: Timed out retrying: Expected to find element: '.sb-soundplayer-icon', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "68032d5e-fc34-4816-bacf-79ce6b2a7174",
-                  "parentUUID": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+                  "uuid": "613df2a4-69a0-46f7-bee9-b77dcc958d53",
+                  "parentUUID": "04156ed7-4013-4426-98d2-1c87e96c4459",
                   "isHook": false,
                   "skipped": false
                 },
@@ -314,7 +314,7 @@
                   "title": "should delete meeting forever",
                   "fullTitle": "MILESTONE-3 -- perspective of a logged-in user creating a meeting and receiving the notes Meeting should delete meeting forever",
                   "timedOut": null,
-                  "duration": 4377,
+                  "duration": 5036,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -327,25 +327,25 @@
                     "estack": "CypressError: Timed out retrying: Expected to find element: '.ff-icon-delete', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "0999695c-40b9-4f72-8706-337cf3ce3218",
-                  "parentUUID": "ab177a84-3c6f-4a63-8aea-bf8930be52cc",
+                  "uuid": "c9b12c66-ab2a-4268-87a2-c3328a0659ba",
+                  "parentUUID": "04156ed7-4013-4426-98d2-1c87e96c4459",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "b9f40a90-fc92-462c-aa5c-3edb9fc07b59"
+                "c53feca8-9808-474a-a1c2-fec4990fd89e"
               ],
               "failures": [
-                "91239c48-7de4-4304-b341-9b7dd7ae3cf8",
-                "dfe9778f-38e2-4a09-b12b-d3aca00eac95",
-                "68032d5e-fc34-4816-bacf-79ce6b2a7174",
-                "0999695c-40b9-4f72-8706-337cf3ce3218"
+                "45dfafee-ad56-43ed-ad9a-dbda146479ac",
+                "51c025e6-3e97-4eb3-83ed-847bf9b50ff5",
+                "613df2a4-69a0-46f7-bee9-b77dcc958d53",
+                "c9b12c66-ab2a-4268-87a2-c3328a0659ba"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 81777,
+              "duration": 109461,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

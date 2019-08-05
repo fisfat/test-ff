@@ -1,7 +1,6 @@
 FROM node:10
-WORKDIR /src/app
+WORKDIR /app
 COPY . .
 RUN npm install
-EXPOSE 6796
-ENV NODE_ENV=production
+EXPOSE 3001
 CMD [ "node", "entry.js" ]

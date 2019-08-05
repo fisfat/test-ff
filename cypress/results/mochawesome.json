@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 3,
-    "tests": 0,
-    "passes": 0,
+    "tests": 5,
+    "passes": 3,
     "pending": 0,
-    "failures": 0,
-    "start": "2019-07-28T01:52:55.502Z",
-    "end": "2019-07-28T01:53:56.734Z",
-    "duration": 61232,
+    "failures": 2,
+    "start": "2019-08-03T19:42:10.400Z",
+    "end": "2019-08-03T19:44:18.676Z",
+    "duration": 128276,
     "testsRegistered": 5,
-    "passPercent": 0,
+    "passPercent": 60,
     "pendingPercent": 0,
-    "other": 2,
-    "hasOther": true,
-    "skipped": 5,
-    "hasSkipped": true
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "3f5e00b9-fc1e-49ac-bbbc-b9939fcb5c13",
+      "uuid": "8f35dc7d-03e1-4fbc-a23a-19dbb08fa017",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "297ac1e3-cb25-402a-854a-eb90c39ec329",
+          "uuid": "d9a3b83a-fdd3-4132-a395-442497bf4cca",
           "title": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+              "uuid": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
               "title": "Teammate Invitation",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "should send teammate invite",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation should send teammate invite",
                   "timedOut": null,
-                  "duration": 40759,
+                  "duration": 82332,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -56,12 +56,12 @@
                   "context": null,
                   "code": "cy.get(\".upscentral-button-separator\").find(\".invite-teammates\").should(\"have.text\", \"Invite Teammates\").click();\ncy.get(\".team-wrapper\").find(\"h3\").first().should(\"have.text\", \"Invite Teammates \"); //mind the space\ncy.get(\".invite-input-container\").find(\".email-input\").should(\"have.value\", \"\").type(invite_email).get(\".name-input\").should(\"have.value\", \"\").type(\"Oluwafisayo\").get(\"#send\").find(\".shared-ui-button_1RE5sx\").should(\"have.text\", \"sendSend Invitations\") //mind the sendSend. not a typo. trying to parse the icon.\n.click() // .find(\".shared-ui-button_1RE5sx\")\n.should(\"have.text\", \"sendSending...\") //mind the sendSending... not a typo. trying to parse the icon.\n.wait(100).get(\".add-members-container\").should(\"have.text\", \"checkInvitations Sent Successfully\"); //mind the checkInvitations. not a typo. trying to parse the icon.",
                   "err": {
-                    "message": "CypressError: Timed out retrying: Expected to find element: '.close-dialog', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Teammate Invitation'",
-                    "estack": "CypressError: Timed out retrying: Expected to find element: '.close-dialog', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Teammate Invitation'\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
+                    "message": "CypressError: Timed out retrying: cy.should() failed because this element is detached from the DOM.\n\n<button icon=\"send\" text=\"Send Invitations\" class=\"shared-ui-button_1RE5sx text-icon-button_Z1HQdOu add-text-button\">...</button>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.should()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                    "estack": "CypressError: Timed out retrying: cy.should() failed because this element is detached from the DOM.\n\n<button icon=\"send\" text=\"Send Invitations\" class=\"shared-ui-button_1RE5sx text-icon-button_Z1HQdOu add-text-button\">...</button>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.should()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
                     "diff": null
                   },
-                  "uuid": "9c0ad2b3-6ed7-4ff0-a9a1-48e52957f5e9",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "21f35829-3b59-4203-bbc8-f442467e662f",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
                   "skipped": false
                 },
@@ -69,56 +69,56 @@
                   "title": "Should remove an input row",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation Should remove an input row",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 1243,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\"input\").first().should(\"be.visible\").get(\".invite-row-container\").find(\".remove-input\").click().get(\"form\").first().should(\"not.have\", \"input\");",
                   "err": {},
-                  "uuid": "fff4acb4-6430-4769-bd77-640c5b933f8a",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "06587904-488b-4b6b-b048-d2b1b7a1084b",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 },
                 {
                   "title": "Should add an input row",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Teammate Invitation Should add an input row",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
-                  "speed": null,
-                  "pass": false,
+                  "duration": 959,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\"#add\").click().get(\".email-input\").should(\"be.visible\").and(\"have.value\", \"\").get(\".name-input\").should(\"be.visible\").and(\"have.value\", \"\");",
                   "err": {},
-                  "uuid": "1fd7602e-cc9b-4549-930b-da417528e40b",
-                  "parentUUID": "e2597c0e-7bb0-496a-ad4c-c44e12de358a",
+                  "uuid": "5f1bd658-57fa-4f84-b2bc-30d847b9aacd",
+                  "parentUUID": "13f506a2-fbc7-497b-a97b-44d33ffdd0d9",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "06587904-488b-4b6b-b048-d2b1b7a1084b",
+                "5f1bd658-57fa-4f84-b2bc-30d847b9aacd"
+              ],
               "failures": [
-                "9c0ad2b3-6ed7-4ff0-a9a1-48e52957f5e9"
+                "21f35829-3b59-4203-bbc8-f442467e662f"
               ],
               "pending": [],
-              "skipped": [
-                "fff4acb4-6430-4769-bd77-640c5b933f8a",
-                "1fd7602e-cc9b-4549-930b-da417528e40b"
-              ],
-              "duration": 40759,
+              "skipped": [],
+              "duration": 84534,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+              "uuid": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
               "title": "Categories Actions",
               "fullFile": "",
               "file": "",
@@ -129,21 +129,17 @@
                   "title": "Should create a category and keywords",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Categories Actions Should create a category and keywords",
                   "timedOut": null,
-                  "duration": 20215,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "duration": 38600,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "cy.visit(\"/categories\");\ncy.location(\"pathname\").should(\"eq\", \"/categories\");\ncy.get(\"#outlined-bare\").type(\"Business\").get(\"#property-chip\").type(\"Meeting\") // .type(\"{enter}\")\n.get(\"#outlined-bare\").invoke(\"val\", \"Business\").get(\"#property-chip\").invoke(\"val\", \"meeting\"); //considered incomplete because dom disapears",
-                  "err": {
-                    "message": "CypressError: Timed out retrying: Expected to find element: '.hidden-login', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Categories Actions'",
-                    "estack": "CypressError: Timed out retrying: Expected to find element: '.hidden-login', but never found it.\n\nBecause this error occurred during a 'before all' hook we are skipping the remaining tests in the current suite: 'Categories Actions'\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
-                    "diff": null
-                  },
-                  "uuid": "0aba8f2e-ba99-4c42-846d-2f4bca7f6a36",
-                  "parentUUID": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+                  "err": {},
+                  "uuid": "81040351-5e8c-46d5-aeea-966aa0cd4b84",
+                  "parentUUID": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
                   "isHook": false,
                   "skipped": false
                 },
@@ -151,31 +147,35 @@
                   "title": "Should remove category",
                   "fullTitle": "MILESTONE-2 -- Test for the dashboard from the perspective of a logged-in user performing common navigation actions Categories Actions Should remove category",
                   "timedOut": null,
-                  "duration": 0,
-                  "state": "skipped",
+                  "duration": 4993,
+                  "state": "failed",
                   "speed": null,
                   "pass": false,
-                  "fail": false,
+                  "fail": true,
                   "pending": false,
                   "context": null,
                   "code": "cy.get(\".property-name\").should(\"have.text\", \"Sample terms\").find(\"svg\").invoke(\"show\").click();",
-                  "err": {},
-                  "uuid": "ac61726a-b147-4774-972e-a694c1b9f46c",
-                  "parentUUID": "8450f7b5-4a89-40e5-a54a-1908c4f04978",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: Expected to find element: '.property-name', but never found it.",
+                    "estack": "CypressError: Timed out retrying: Expected to find element: '.property-name', but never found it.\n    at Object.cypressErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83220:11)\n    at Object.throwErr (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83185:18)\n    at Object.throwErrByPath (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:83212:17)\n    at retry (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:76640:16)\n    at https://app.fireflies.ai/__cypress/runner/cypress_runner.js:68612:18\n    at tryCatcher (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:132142:23)\n    at Promise._settlePromiseFromHandler (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130160:31)\n    at Promise._settlePromise (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130217:18)\n    at Promise._settlePromise0 (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130262:10)\n    at Promise._settlePromises (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:130337:18)\n    at Async._drainQueue (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127066:16)\n    at Async._drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:127076:10)\n    at Async.drainQueues (https://app.fireflies.ai/__cypress/runner/cypress_runner.js:126950:14)\n    at <anonymous>",
+                    "diff": null
+                  },
+                  "uuid": "13bb017d-f1b9-479e-9e22-4aeb9ad023c8",
+                  "parentUUID": "c12adb4d-3441-4ce5-b4b1-40e29363c8be",
                   "isHook": false,
-                  "skipped": true
+                  "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [],
+              "passes": [
+                "81040351-5e8c-46d5-aeea-966aa0cd4b84"
+              ],
               "failures": [
-                "0aba8f2e-ba99-4c42-846d-2f4bca7f6a36"
+                "13bb017d-f1b9-479e-9e22-4aeb9ad023c8"
               ],
               "pending": [],
-              "skipped": [
-                "ac61726a-b147-4774-972e-a694c1b9f46c"
-              ],
-              "duration": 20215,
+              "skipped": [],
+              "duration": 43593,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
